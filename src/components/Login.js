@@ -43,7 +43,7 @@ else{
 
   return (
     <div>
-        <form className="my-2" style={{width:"80%"}} onSubmit={handleSubmit}>
+        <form className="my-2" style={{width:"80%", marginLeft:"10px"}} onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label my-2">Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" onChange={onChange}/>

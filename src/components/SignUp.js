@@ -46,7 +46,7 @@ else{showAlert("password is not match", "warning")}
   return (
     <div>
         <div>
-        <form className="my-2" style={{width:"80%"}} onSubmit={handleSubmit}>
+        <form className="my-2" style={{width:"80%", marginLeft:"10px"}} onSubmit={handleSubmit}>
         <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label my-2">Name</label>
     <input type="text" className="form-control" id="exampleInputEmail1" name="name"   onChange={onChange} aria-describedby="emailHelp"/>
