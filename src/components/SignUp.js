@@ -3,8 +3,10 @@ import {useState} from 'react'
 import {useNavigate} from "react-router-dom"
 import { useContext } from 'react';
 import noteContext from '../context/noteContext';
+import { BASE_URL } from './helper';
 
 const SignUp = () => {
+
   const context = useContext(noteContext);
 
 const {showAlert} = context;
@@ -18,7 +20,7 @@ const onChange = (e) =>{
 const handleSubmit = async(e) =>{
     e.preventDefault();
     const {name,email,password} = credentials;
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`,{
+    const response = await fetch(`${BASE_URL}/api/auth/createuser`,{
       method: 'POST',
 
       headers:{

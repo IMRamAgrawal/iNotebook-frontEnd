@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import { useContext } from 'react';
 import noteContext from '../context/noteContext';
-
+import { BASE_URL } from './helper';
 const Login = () => {
+ 
  const[credentials, setCredentials] = useState({email:"", password:""})
  let navigate = useNavigate();
  const context = useContext(noteContext);
@@ -17,7 +18,7 @@ const onChange = (e) =>{
 const handleSubmit = async(e) =>{
     e.preventDefault();
  
-    const response = await fetch(`http://localhost:5000/api/auth/login`,{
+    const response = await fetch(`${BASE_URL}/api/auth/login`,{
       method: 'POST',
 
       headers:{
